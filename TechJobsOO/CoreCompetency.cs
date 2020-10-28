@@ -5,9 +5,7 @@ namespace TechJobsOO
     {
         private int id;
         private static int nextId = 1;
-        private string value;
-
-        // TODO: Change the fields to auto-implemented properties.
+        private string value { get; set; }
 
         public CoreCompetency()
         {
@@ -36,5 +34,5 @@ namespace TechJobsOO
             return value;
         }
     }
-    }
+}
 }
