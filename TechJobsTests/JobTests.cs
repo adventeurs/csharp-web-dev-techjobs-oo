@@ -6,6 +6,21 @@ namespace TechJobsTests
     [TestClass]
     public class JobTests
     {
+// We can initialize test variables here to save ourselve from having to recreate new Job()
+        Job job1;
+        Job job2;
+        Job job3;
+        Job job4;
+
+        [TestInitialize]
+        public void CreateJobObjects()
+        {
+            job1 = new Job();
+            job2 = new Job();
+            job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        }
+//         
         [TestMethod]
         public void TestSettingJobId()
         {
